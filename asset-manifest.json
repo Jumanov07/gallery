@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Gallery-App/static/css/main.2a51c473.css",
-    "main.js": "/Gallery-App/static/js/main.1fe1b023.js",
-    "static/media/downArrow5.jpg": "/Gallery-App/static/media/downArrow5.575bd266f4cf365478b4.jpg",
-    "index.html": "/Gallery-App/index.html",
-    "main.2a51c473.css.map": "/Gallery-App/static/css/main.2a51c473.css.map",
-    "main.1fe1b023.js.map": "/Gallery-App/static/js/main.1fe1b023.js.map"
+    "main.css": "/gallery/static/css/main.2a51c473.css",
+    "main.js": "/gallery/static/js/main.c7b0de59.js",
+    "static/media/downArrow.jpg": "/gallery/static/media/downArrow.575bd266f4cf365478b4.jpg",
+    "index.html": "/gallery/index.html",
+    "main.2a51c473.css.map": "/gallery/static/css/main.2a51c473.css.map",
+    "main.c7b0de59.js.map": "/gallery/static/js/main.c7b0de59.js.map"
   },
   "entrypoints": [
     "static/css/main.2a51c473.css",
-    "static/js/main.1fe1b023.js"
+    "static/js/main.c7b0de59.js"
   ]
 }
