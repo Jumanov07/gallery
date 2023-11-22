@@ -1,7 +1,6 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import ProgressBar from "./ProgressBar";
-import downArrowPhoto from '../assets/downArrow5.jpg'
+import downArrowPhoto from "../assets/downArrow.jpg";
 
 const UploadForm = () => {
   const [file, setFile] = useState(null);
@@ -26,7 +25,7 @@ const UploadForm = () => {
   return (
     <form>
       <p className="titleBtn">Click me to add a photo</p>
-      <img src={downArrowPhoto} alt='your_image' className="downArrowPhoto"/>
+      <img src={downArrowPhoto} alt="your_image" className="downArrowPhoto" />
       <label>
         <input type="file" placeholder="+" onChange={changeHandler} />
         <span>+</span>

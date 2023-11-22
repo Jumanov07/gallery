@@ -15,6 +15,7 @@ const ProgressBar = ({ file, setFile }) => {
       setFile(null);
     }
   }, [url, setFile]);
+
   return (
     <>
       <div className="global-progress">

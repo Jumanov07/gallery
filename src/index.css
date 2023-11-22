@@ -6,7 +6,6 @@
   --error: #ff4a4a;
 }
 
-/* base styles & title */
 body {
   font-family: "Noto Serif";
   color: var(--secondary);
@@ -72,7 +71,7 @@ label:hover {
   border-radius: 10px;
 }
 
-.titleBtn{
+.titleBtn {
   color: white;
 }
 
@@ -92,8 +91,6 @@ label:hover {
   margin-top: 20px;
 }
 
-/* image grid styles */
-
 .img-grid {
   margin: 20px auto;
   display: grid;
@@ -105,7 +102,6 @@ label:hover {
   overflow: hidden;
   height: 0;
   padding: 50% 0;
-  /* padding controls height, will always be perfectly square regardless of width */
   position: relative;
   opacity: 0.8;
 }
@@ -117,8 +113,6 @@ label:hover {
   top: 0;
   left: 0;
 }
-
-/* modal styles */
 
 .backdrop {
   position: fixed;
