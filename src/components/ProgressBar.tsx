@@ -1,14 +1,17 @@
-import React from "react";
 import { useEffect } from "react";
 import CountUp from "react-countup";
 import useStorage from "../hooks/useStorage";
-import { motion } from "framer-motion";
 
-const start = 0;
-const end = 100;
+const start: number = 0;
+const end: number = 100;
 
-const ProgressBar = ({ file, setFile }) => {
-  const { url, progress } = useStorage(file);
+interface Props {
+  file: File | null;
+  setFile: (value: File | null) => void;
+}
+
+const ProgressBar = ({ file, setFile }: Props) => {
+  const { url } = useStorage(file);
 
   useEffect(() => {
     if (url) {
@@ -20,14 +23,8 @@ const ProgressBar = ({ file, setFile }) => {
     <>
       <div className="global-progress">
         <CountUp start={start} end={end} duration={3} className="count" />
+
         <p className="percent">%</p>
-        <motion.div
-          className="progress-bar"
-          initial={{ width: 0 }}
-          animate={{ width: progress + "%" }}
-        >
-          Loading...
-        </motion.div>
       </div>
     </>
   );

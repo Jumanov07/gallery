@@ -1,12 +1,11 @@
-import React from "react";
 import { useState } from "react";
-import ImageGrid from "./comps/ImageGrid";
-import Modal from "./comps/Modal";
-import Title from "./comps/Title";
-import UploadForm from "./comps/UploadForm";
+import Title from "./components/Title";
+import UploadForm from "./components/UploadForm";
+import ImageGrid from "./components/ImageGrid";
+import Modal from "./components/Modal";
 
 const App = () => {
-  const [selectedImg, setSelectedImg] = useState(null);
+  const [selectedImg, setSelectedImg] = useState<string>("");
 
   return (
     <div className="App">

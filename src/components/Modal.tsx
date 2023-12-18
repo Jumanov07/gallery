@@ -1,10 +1,16 @@
-import React from "react";
 import { motion } from "framer-motion";
+import { MouseEvent } from "react";
 
-const Modal = ({ selectedImg, setSelectedImg }) => {
-  const handleClick = (e) => {
-    if (e.target.classList.contains("backdrop")) {
-      setSelectedImg(null);
+interface Props {
+  setSelectedImg: (value: string) => void;
+  selectedImg: string;
+}
+
+const Modal = ({ selectedImg, setSelectedImg }: Props) => {
+  const handleClick = (e: MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLDivElement;
+    if (target.classList.contains("backdrop")) {
+      setSelectedImg("");
     }
   };
 

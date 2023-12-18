@@ -1,31 +1,36 @@
-import React, { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import ProgressBar from "./ProgressBar";
-import downArrowPhoto from "../assets/downArrow.jpg";
 
 const UploadForm = () => {
-  const [file, setFile] = useState(null);
-  const [error, setError] = useState(null);
+  const [file, setFile] = useState<null | File>(null);
+  const [error, setError] = useState<string>("");
 
   const types = ["image/png", "image/jpeg"];
 
-  const changeHandler = (e) => {
+  const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
 
-    let selected = e.target.files[0];
+    const target = e.target as HTMLInputElement;
 
-    if (selected && types.includes(selected.type)) {
-      setFile(selected);
-      setError("");
+    if (target.files) {
+      let selected = target.files[0];
+
+      if (selected && types.includes(selected.type)) {
+        setFile(selected);
+        setError("");
+      } else {
+        setFile(null);
+        setError("Please select an image file (png or jpeg)");
+      }
     } else {
       setFile(null);
-      setError("Please select in image file (png or jpeg)");
+      setError("Please select a file");
     }
   };
 
   return (
     <form>
       <p className="titleBtn">Click me to add a photo</p>
-      <img src={downArrowPhoto} alt="your_image" className="downArrowPhoto" />
       <label>
         <input type="file" placeholder="+" onChange={changeHandler} />
         <span>+</span>
